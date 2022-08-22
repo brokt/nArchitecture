@@ -1,5 +1,5 @@
-﻿using Application.Features.someFeature.Commands.CreateSomeFeature;
-using Application.Features.someFeature.Dtos;
+﻿//using Application.Features.someFeature.Commands.CreateSomeFeature;
+//using Application.Features.someFeature.Dtos;
 using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI.Controllers
@@ -8,12 +8,12 @@ namespace WebAPI.Controllers
     [ApiController]
     public class SomeFeatureEntitiesController : BaseController
     {
-        [HttpPost]
-        public async Task<IActionResult> Add([FromBody] CreateSomeFeatureEntityCommand createSomeFeatureEntityCommand)
-        {
-            CreatedSomeFeatureEntityDto result = await Mediator.Send(createSomeFeatureEntityCommand);
-            return Created("", result);
-        }
+        //[HttpPost]
+        //public async Task<IActionResult> Add([FromBody] CreateSomeFeatureEntityCommand createSomeFeatureEntityCommand)
+        //{
+        //    CreatedSomeFeatureEntityDto result = await Mediator.Send(createSomeFeatureEntityCommand);
+        //    return Created("", result);
+        //}
 
        
     }
