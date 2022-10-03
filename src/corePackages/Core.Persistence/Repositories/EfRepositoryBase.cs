@@ -36,6 +36,7 @@ public class EfRepositoryBase<TEntity, TContext> : IAsyncRepository<TEntity>, IR
         if (predicate != null) queryable = queryable.Where(predicate);
         if (orderBy != null)
             return await orderBy(queryable).ToPaginateAsync(index, size, 0, cancellationToken);
+
         return await queryable.ToPaginateAsync(index, size, 0, cancellationToken);
     }
 
